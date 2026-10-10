@@ -1,0 +1,44 @@
+{"task": "rename-class", "arm": "standard", "ok": true, "turns": 5, "out": 1085, "inp": 24611, "cost": 0.030963800000000003}
+{"task": "rename-class", "arm": "standard", "ok": true, "turns": 6, "out": 1150, "inp": 24210, "cost": 0.0306862}
+{"task": "rename-class", "arm": "standard", "ok": true, "turns": 6, "out": 1129, "inp": 24180, "cost": 0.030409400000000003}
+{"task": "rename-class", "arm": "anchored", "ok": true, "turns": 3, "out": 764, "inp": 17044, "cost": 0.0343688}
+{"task": "rename-class", "arm": "anchored", "ok": true, "turns": 3, "out": 743, "inp": 17018, "cost": 0.0229664}
+{"task": "rename-class", "arm": "anchored", "ok": true, "turns": 3, "out": 718, "inp": 16979, "cost": 0.022541399999999996}
+{"task": "getenv", "arm": "standard", "ok": true, "turns": 6, "out": 949, "inp": 23512, "cost": 0.027958999999999998}
+{"task": "getenv", "arm": "standard", "ok": true, "turns": 6, "out": 964, "inp": 23488, "cost": 0.0280472}
+{"task": "getenv", "arm": "standard", "ok": true, "turns": 8, "out": 1364, "inp": 30781, "cost": 0.035451199999999995}
+{"task": "getenv", "arm": "anchored", "ok": true, "turns": 3, "out": 410, "inp": 16642, "cost": 0.018444000000000002}
+{"task": "getenv", "arm": "anchored", "ok": true, "turns": 3, "out": 404, "inp": 16615, "cost": 0.018333000000000002}
+{"task": "getenv", "arm": "anchored", "ok": true, "turns": 3, "out": 434, "inp": 16725, "cost": 0.0188602}
+{"task": "ctx-param", "arm": "standard", "ok": true, "turns": 8, "out": 1719, "inp": 47642, "cost": 0.06463379999999999}
+{"task": "ctx-param", "arm": "standard", "ok": true, "turns": 8, "out": 1687, "inp": 47386, "cost": 0.06389399999999999}
+{"task": "ctx-param", "arm": "standard", "ok": true, "turns": 8, "out": 1599, "inp": 41946, "cost": 0.054918800000000004}
+{"task": "ctx-param", "arm": "anchored", "ok": true, "turns": 7, "out": 1895, "inp": 68713, "cost": 0.068396}
+{"task": "ctx-param", "arm": "anchored", "ok": true, "turns": 9, "out": 2409, "inp": 78904, "cost": 0.08464859999999999}
+{"task": "ctx-param", "arm": "anchored", "ok": true, "turns": 5, "out": 1239, "inp": 49182, "cost": 0.05924499999999999}
+{"task": "multi-rename", "arm": "standard", "ok": true, "turns": 19, "out": 3529, "inp": 50922, "cost": 0.0803002}
+{"task": "multi-rename", "arm": "standard", "ok": true, "turns": 10, "out": 1885, "inp": 46564, "cost": 0.05397879999999999}
+{"task": "multi-rename", "arm": "standard", "ok": true, "turns": 16, "out": 3019, "inp": 38237, "cost": 0.06960060000000001}
+{"task": "multi-rename", "arm": "anchored", "ok": true, "turns": 8, "out": 1669, "inp": 34772, "cost": 0.0462572}
+{"task": "multi-rename", "arm": "anchored", "ok": true, "turns": 11, "out": 2327, "inp": 62605, "cost": 0.0618156}
+{"task": "multi-rename", "arm": "anchored", "ok": true, "turns": 8, "out": 1856, "inp": 37333, "cost": 0.052488799999999995}
+{"task": "bool-states", "arm": "standard", "ok": true, "turns": 6, "out": 1025, "inp": 25078, "cost": 0.0315934}
+{"task": "bool-states", "arm": "standard", "ok": true, "turns": 5, "out": 789, "inp": 24573, "cost": 0.028060799999999997}
+{"task": "bool-states", "arm": "standard", "ok": true, "turns": 5, "out": 691, "inp": 24303, "cost": 0.0265062}
+{"task": "bool-states", "arm": "anchored", "ok": true, "turns": 5, "out": 962, "inp": 25008, "cost": 0.0314624}
+{"task": "bool-states", "arm": "anchored", "ok": true, "turns": 4, "out": 612, "inp": 24445, "cost": 0.026246200000000004}
+{"task": "bool-states", "arm": "anchored", "ok": true, "turns": 4, "out": 672, "inp": 24482, "cost": 0.027005600000000005}
+
+task         arm        correct  turns output tok  input tok  cost $
+rename-class standard      3/3    5.7       1121      24334   0.031
+rename-class anchored      3/3    3.0        742      17014   0.027
+getenv       standard      3/3    6.7       1092      25927   0.030
+getenv       anchored      3/3    3.0        416      16661   0.019
+ctx-param    standard      3/3    8.0       1668      45658   0.061
+ctx-param    anchored      3/3    7.0       1848      65600   0.071
+multi-rename standard      3/3   15.0       2811      45241   0.068
+multi-rename anchored      3/3    9.0       1951      44903   0.054
+bool-states  standard      3/3    5.3        835      24651   0.029
+bool-states  anchored      3/3    4.3        749      24645   0.028
+TOTAL standard   correct 15/15  output 22584  input 497433  cost $0.657
+TOTAL anchored   correct 15/15  output 17114  input 506467  cost $0.593

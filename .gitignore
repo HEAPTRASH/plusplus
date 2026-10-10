@@ -1,0 +1,9 @@
+node_modules/
+# engine-generated type stubs, rewritten on every load
+mod/.claude-plugin/types/
+# agent transcripts: they contain source from the benchmarked repositories
+bench/runs/
+# public benchmarks, downloaded at pinned revisions
+bench/data/
+.DS_Store
+__pycache__/

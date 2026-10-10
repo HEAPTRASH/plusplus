@@ -1,0 +1,24 @@
+{
+ "model": "claude-opus-5-5",
+ "single": 0,
+ "total": 0,
+ "words": {},
+ "formats": {
+  "click/src/click/termui.py": {
+   "raw": 12553,
+   "Read (cat -n)": 3.2,
+   "Word§ (v1-v3)": 4.36,
+   "ID§ (v4)": 3.18,
+   "no indent": -0.78,
+   "tabs": 0.01
+  },
+  "click/src/click/core.py": {
+   "raw": 52003,
+   "Read (cat -n)": 3.93,
+   "Word§ (v1-v3)": 4.37,
+   "ID§ (v4)": 3.18,
+   "no indent": -0.85,
+   "tabs": -0.02
+  }
+ }
+}

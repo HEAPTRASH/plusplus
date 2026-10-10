@@ -1,0 +1,12 @@
+{
+ "model": "claude-opus-5-5",
+ "single": 0,
+ "total": 4,
+ "words": {
+  "Ability": 2,
+  "Discount": 2,
+  "Lobby": 3,
+  "Runnable": 3
+ },
+ "formats": {}
+}

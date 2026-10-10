@@ -1,0 +1,1 @@
+{ "name": "tokprobe", "version": "0.1.0", "description": "Measures Claude token counts via model.complete usage" }

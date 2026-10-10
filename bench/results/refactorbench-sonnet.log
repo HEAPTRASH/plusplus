@@ -1,0 +1,113 @@
+{"task": "ansible/sort-groups-to-group-sort", "arm": "standard", "ok": true, "turns": 8, "out": 1466, "inp": 27115, "cost": 0.0381968, "secs": 22, "models": {"claude-sonnet-5-5": 0.0382}}
+{"task": "ansible/sort-groups-to-group-sort", "arm": "anchored", "ok": true, "turns": 6, "out": 906, "inp": 34793, "cost": 0.046759600000000005, "secs": 22, "models": {"claude-sonnet-5-5": 0.0468}}
+{"task": "ansible/sort-groups-to-group-sort", "arm": "routed", "ok": true, "turns": 6, "out": 946, "inp": 27085, "cost": 0.0438664, "secs": 20, "models": {"claude-sonnet-5-5": 0.0439}, "routes": ["main:involved>sonnet medium"]}
+{"task": "ansible/parse_key_value", "arm": "standard", "ok": true, "turns": 38, "out": 6534, "inp": 54631, "cost": 0.1261098, "secs": 48, "models": {"claude-sonnet-5-5": 0.1261}}
+{"task": "ansible/parse_key_value", "arm": "anchored", "ok": true, "turns": 4, "out": 1287, "inp": 22256, "cost": 0.0390642, "secs": 19, "models": {"claude-sonnet-5-5": 0.0391}}
+{"task": "ansible/parse_key_value", "arm": "routed", "ok": true, "turns": 4, "out": 2390, "inp": 32308, "cost": 0.00338441, "secs": 25, "models": {"claude-haiku-5-5": 0.0034}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "celery/object-mro-lookup", "arm": "standard", "ok": true, "turns": 5, "out": 891, "inp": 26566, "cost": 0.030649799999999998, "secs": 12, "models": {"claude-sonnet-5-5": 0.0306}}
+{"task": "celery/object-mro-lookup", "arm": "anchored", "ok": true, "turns": 4, "out": 611, "inp": 26503, "cost": 0.0265756, "secs": 10, "models": {"claude-sonnet-5-5": 0.0266}}
+{"task": "celery/object-mro-lookup", "arm": "routed", "ok": true, "turns": 7, "out": 1588, "inp": 46171, "cost": 0.00234397, "secs": 15, "models": {"claude-haiku-5-5": 0.0023}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "celery/truncate-text", "arm": "standard", "ok": true, "turns": 20, "out": 3784, "inp": 48225, "cost": 0.0809202, "secs": 27, "models": {"claude-sonnet-5-5": 0.0809}}
+{"task": "celery/truncate-text", "arm": "anchored", "ok": true, "turns": 3, "out": 1339, "inp": 21763, "cost": 0.0382392, "secs": 13, "models": {"claude-sonnet-5-5": 0.0382}}
+{"task": "celery/truncate-text", "arm": "routed", "ok": true, "turns": 3, "out": 1447, "inp": 21904, "cost": 0.0398984, "secs": 14, "models": {"claude-sonnet-5-5": 0.0399}, "routes": ["main:involved>sonnet medium"]}
+{"task": "django/add-none-handling-duration-string", "arm": "standard", "ok": false, "turns": 6, "out": 1172, "inp": 22794, "cost": 0.037155400000000005, "secs": 15, "models": {"claude-sonnet-5-5": 0.0372}}
+{"task": "django/add-none-handling-duration-string", "arm": "anchored", "ok": false, "turns": 6, "out": 771, "inp": 22219, "cost": 0.031328, "secs": 13, "models": {"claude-sonnet-5-5": 0.0313}}
+{"task": "django/add-none-handling-duration-string", "arm": "routed", "ok": false, "turns": 6, "out": 791, "inp": 22019, "cost": 0.0311422, "secs": 16, "models": {"claude-sonnet-5-5": 0.0311}, "routes": ["main:involved>sonnet medium"]}
+{"task": "django/add-log-parameter-get-resolver", "arm": "standard", "ok": false, "turns": 16, "out": 3458, "inp": 34798, "cost": 0.07839499999999999, "secs": 33, "models": {"claude-sonnet-5-5": 0.0784}}
+{"task": "django/add-log-parameter-get-resolver", "arm": "anchored", "ok": false, "turns": 4, "out": 1894, "inp": 35358, "cost": 0.05852360000000001, "secs": 27, "models": {"claude-sonnet-5-5": 0.0585}}
+{"task": "django/add-log-parameter-get-resolver", "arm": "routed", "ok": false, "turns": 5, "out": 1949, "inp": 35693, "cost": 0.05950540000000001, "secs": 29, "models": {"claude-sonnet-5-5": 0.0595}, "routes": ["main:involved>sonnet medium"]}
+{"task": "fastapi/add-log-parameter-generate-option-id-for-path", "arm": "standard", "ok": true, "turns": 4, "out": 770, "inp": 20082, "cost": 0.0274212, "secs": 11, "models": {"claude-sonnet-5-5": 0.0274}}
+{"task": "fastapi/add-log-parameter-generate-option-id-for-path", "arm": "anchored", "ok": true, "turns": 4, "out": 613, "inp": 19992, "cost": 0.0251986, "secs": 10, "models": {"claude-sonnet-5-5": 0.0252}}
+{"task": "fastapi/add-log-parameter-generate-option-id-for-path", "arm": "routed", "ok": true, "turns": 6, "out": 847, "inp": 34499, "cost": 0.0336696, "secs": 14, "models": {"claude-sonnet-5-5": 0.0337}, "routes": ["main:involved>sonnet medium"]}
+{"task": "fastapi/get-auth-scheme-param", "arm": "standard", "ok": true, "turns": 8, "out": 1210, "inp": 27020, "cost": 0.0346032, "secs": 13, "models": {"claude-sonnet-5-5": 0.0346}}
+{"task": "fastapi/get-auth-scheme-param", "arm": "anchored", "ok": true, "turns": 3, "out": 386, "inp": 19511, "cost": 0.0217342, "secs": 10, "models": {"claude-sonnet-5-5": 0.0217}}
+{"task": "fastapi/get-auth-scheme-param", "arm": "routed", "ok": true, "turns": 4, "out": 1005, "inp": 20067, "cost": 0.00151596, "secs": 13, "models": {"claude-haiku-5-5": 0.0015}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "flask/add-log-parameter-get-flashed-messages", "arm": "standard", "ok": true, "turns": 13, "out": 2792, "inp": 33772, "cost": 0.06578039999999999, "secs": 21, "models": {"claude-sonnet-5-5": 0.0658}}
+{"task": "flask/add-log-parameter-get-flashed-messages", "arm": "anchored", "ok": true, "turns": 7, "out": 1632, "inp": 38968, "cost": 0.04903300000000001, "secs": 16, "models": {"claude-sonnet-5-5": 0.049}}
+{"task": "flask/add-log-parameter-get-flashed-messages", "arm": "routed", "ok": true, "turns": 8, "out": 1694, "inp": 47385, "cost": 0.052347, "secs": 20, "models": {"claude-sonnet-5-5": 0.0523}, "routes": ["main:involved>sonnet medium"]}
+{"task": "flask/render-template-str", "arm": "standard", "ok": true, "turns": 18, "out": 3066, "inp": 31210, "cost": 0.06422320000000001, "secs": 23, "models": {"claude-sonnet-5-5": 0.0642}}
+{"task": "flask/render-template-str", "arm": "anchored", "ok": true, "turns": 3, "out": 735, "inp": 20522, "cost": 0.0282384, "secs": 10, "models": {"claude-sonnet-5-5": 0.0282}}
+{"task": "flask/render-template-str", "arm": "routed", "ok": true, "turns": 4, "out": 1581, "inp": 29403, "cost": 0.00206432, "secs": 12, "models": {"claude-haiku-5-5": 0.0021}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "requests/add-log-parameter-resolve-proxies", "arm": "standard", "ok": true, "turns": 7, "out": 1351, "inp": 26852, "cost": 0.036952399999999996, "secs": 13, "models": {"claude-sonnet-5-5": 0.037}}
+{"task": "requests/add-log-parameter-resolve-proxies", "arm": "anchored", "ok": true, "turns": 4, "out": 704, "inp": 19468, "cost": 0.025354, "secs": 10, "models": {"claude-sonnet-5-5": 0.0254}}
+{"task": "requests/add-log-parameter-resolve-proxies", "arm": "routed", "ok": true, "turns": 4, "out": 825, "inp": 19634, "cost": 0.027011399999999998, "secs": 10, "models": {"claude-sonnet-5-5": 0.027}, "routes": ["main:routine>sonnet medium"]}
+{"task": "requests/new-cookie-utils-class", "arm": "standard", "ok": true, "turns": 33, "out": 12266, "inp": 197931, "cost": 0.2681161999999999, "secs": 73, "models": {"claude-sonnet-5-5": 0.2681}}
+{"task": "requests/new-cookie-utils-class", "arm": "anchored", "ok": true, "turns": 13, "out": 3901, "inp": 55915, "cost": 0.1023052, "secs": 28, "models": {"claude-sonnet-5-5": 0.1023}}
+{"task": "requests/new-cookie-utils-class", "arm": "routed", "ok": true, "turns": 17, "out": 9557, "inp": 102965, "cost": 0.2000086, "secs": 56, "models": {"claude-sonnet-5-5": 0.2}, "routes": ["main:involved>sonnet medium"]}
+{"task": "salt/exactly-n-boto-mod", "arm": "standard", "ok": false, "turns": 11, "out": 2585, "inp": 53313, "cost": 0.0613214, "secs": 26, "models": {"claude-sonnet-5-5": 0.0613}}
+{"task": "salt/exactly-n-boto-mod", "arm": "anchored", "ok": false, "turns": 10, "out": 2190, "inp": 49828, "cost": 0.058586000000000006, "secs": 23, "models": {"claude-sonnet-5-5": 0.0586}}
+{"task": "salt/exactly-n-boto-mod", "arm": "routed", "ok": false, "turns": 6, "out": 3870, "inp": 65145, "cost": 0.0046374400000000005, "secs": 23, "models": {"claude-haiku-5-5": 0.0046}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "salt/pem-fingerprint", "arm": "standard", "ok": false, "turns": 10, "out": 2052, "inp": 22828, "cost": 0.0495722, "secs": 18, "models": {"claude-sonnet-5-5": 0.0496}}
+{"task": "salt/pem-fingerprint", "arm": "anchored", "ok": true, "turns": 3, "out": 1040, "inp": 22151, "cost": 0.035524400000000005, "secs": 13, "models": {"claude-sonnet-5-5": 0.0355}}
+{"task": "salt/pem-fingerprint", "arm": "routed", "ok": false, "turns": 5, "out": 2526, "inp": 31389, "cost": 0.00278525, "secs": 23, "models": {"claude-haiku-5-5": 0.0028}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "scrapy/add-log-parameter-xmliter", "arm": "standard", "ok": false, "turns": 21, "out": 5266, "inp": 72491, "cost": 0.11355860000000001, "secs": 41, "models": {"claude-sonnet-5-5": 0.1136}}
+{"task": "scrapy/add-log-parameter-xmliter", "arm": "anchored", "ok": true, "turns": 7, "out": 2524, "inp": 38907, "cost": 0.0758428, "secs": 22, "models": {"claude-sonnet-5-5": 0.0758}}
+{"task": "scrapy/add-log-parameter-xmliter", "arm": "routed", "ok": true, "turns": 7, "out": 2749, "inp": 35809, "cost": 0.0709144, "secs": 23, "models": {"claude-sonnet-5-5": 0.0709}, "routes": ["main:routine>sonnet medium"]}
+{"task": "scrapy/rename-description-commands", "arm": "standard", "ok": true, "turns": 45, "out": 7922, "inp": 43261, "cost": 0.14631159999999999, "secs": 47, "models": {"claude-sonnet-5-5": 0.1463}}
+{"task": "scrapy/rename-description-commands", "arm": "anchored", "ok": false, "turns": 3, "out": 1392, "inp": 21909, "cost": 0.0393608, "secs": 12, "models": {"claude-sonnet-5-5": 0.0394}}
+{"task": "scrapy/rename-description-commands", "arm": "routed", "ok": false, "turns": 3, "out": 916, "inp": 20788, "cost": 0.00155201, "secs": 9, "models": {"claude-haiku-5-5": 0.0016}, "routes": ["main:mechanical>haiku medium"]}
+{"task": "tornado/rename-to-camel-case", "arm": "standard", "ok": true, "turns": 6, "out": 1356, "inp": 19863, "cost": 0.034138, "secs": 13, "models": {"claude-sonnet-5-5": 0.0341}}
+{"task": "tornado/rename-to-camel-case", "arm": "anchored", "ok": true, "turns": 4, "out": 853, "inp": 26874, "cost": 0.029951400000000003, "secs": 12, "models": {"claude-sonnet-5-5": 0.03}}
+{"task": "tornado/rename-to-camel-case", "arm": "routed", "ok": true, "turns": 4, "out": 669, "inp": 19686, "cost": 0.025336400000000002, "secs": 12, "models": {"claude-sonnet-5-5": 0.0253}, "routes": ["main:routine>sonnet medium"]}
+{"task": "tornado/rename-http1connection", "arm": "standard", "ok": true, "turns": 15, "out": 2723, "inp": 33908, "cost": 0.061671, "secs": 20, "models": {"claude-sonnet-5-5": 0.0617}}
+{"task": "tornado/rename-http1connection", "arm": "anchored", "ok": true, "turns": 3, "out": 1193, "inp": 21572, "cost": 0.035669400000000004, "secs": 11, "models": {"claude-sonnet-5-5": 0.0357}}
+{"task": "tornado/rename-http1connection", "arm": "routed", "ok": true, "turns": 4, "out": 2464, "inp": 31015, "cost": 0.0026798300000000002, "secs": 16, "models": {"claude-haiku-5-5": 0.0027}, "routes": ["main:mechanical>haiku medium"]}
+
+task                            arm        correct  turns output tok  input tok  cost $
+ansible/sort-groups-to-group-so standard      1/1    8.0       1466      27115   0.038
+ansible/sort-groups-to-group-so anchored      1/1    6.0        906      34793   0.047
+ansible/sort-groups-to-group-so routed        1/1    6.0        946      27085   0.044
+ansible/parse_key_value         standard      1/1   38.0       6534      54631   0.126
+ansible/parse_key_value         anchored      1/1    4.0       1287      22256   0.039
+ansible/parse_key_value         routed        1/1    4.0       2390      32308   0.003
+celery/object-mro-lookup        standard      1/1    5.0        891      26566   0.031
+celery/object-mro-lookup        anchored      1/1    4.0        611      26503   0.027
+celery/object-mro-lookup        routed        1/1    7.0       1588      46171   0.002
+celery/truncate-text            standard      1/1   20.0       3784      48225   0.081
+celery/truncate-text            anchored      1/1    3.0       1339      21763   0.038
+celery/truncate-text            routed        1/1    3.0       1447      21904   0.040
+django/add-none-handling-durati standard      0/1    6.0       1172      22794   0.037
+django/add-none-handling-durati anchored      0/1    6.0        771      22219   0.031
+django/add-none-handling-durati routed        0/1    6.0        791      22019   0.031
+django/add-log-parameter-get-re standard      0/1   16.0       3458      34798   0.078
+django/add-log-parameter-get-re anchored      0/1    4.0       1894      35358   0.059
+django/add-log-parameter-get-re routed        0/1    5.0       1949      35693   0.060
+fastapi/add-log-parameter-gener standard      1/1    4.0        770      20082   0.027
+fastapi/add-log-parameter-gener anchored      1/1    4.0        613      19992   0.025
+fastapi/add-log-parameter-gener routed        1/1    6.0        847      34499   0.034
+fastapi/get-auth-scheme-param   standard      1/1    8.0       1210      27020   0.035
+fastapi/get-auth-scheme-param   anchored      1/1    3.0        386      19511   0.022
+fastapi/get-auth-scheme-param   routed        1/1    4.0       1005      20067   0.002
+flask/add-log-parameter-get-fla standard      1/1   13.0       2792      33772   0.066
+flask/add-log-parameter-get-fla anchored      1/1    7.0       1632      38968   0.049
+flask/add-log-parameter-get-fla routed        1/1    8.0       1694      47385   0.052
+flask/render-template-str       standard      1/1   18.0       3066      31210   0.064
+flask/render-template-str       anchored      1/1    3.0        735      20522   0.028
+flask/render-template-str       routed        1/1    4.0       1581      29403   0.002
+requests/add-log-parameter-reso standard      1/1    7.0       1351      26852   0.037
+requests/add-log-parameter-reso anchored      1/1    4.0        704      19468   0.025
+requests/add-log-parameter-reso routed        1/1    4.0        825      19634   0.027
+requests/new-cookie-utils-class standard      1/1   33.0      12266     197931   0.268
+requests/new-cookie-utils-class anchored      1/1   13.0       3901      55915   0.102
+requests/new-cookie-utils-class routed        1/1   17.0       9557     102965   0.200
+salt/exactly-n-boto-mod         standard      0/1   11.0       2585      53313   0.061
+salt/exactly-n-boto-mod         anchored      0/1   10.0       2190      49828   0.059
+salt/exactly-n-boto-mod         routed        0/1    6.0       3870      65145   0.005
+salt/pem-fingerprint            standard      0/1   10.0       2052      22828   0.050
+salt/pem-fingerprint            anchored      1/1    3.0       1040      22151   0.036
+salt/pem-fingerprint            routed        0/1    5.0       2526      31389   0.003
+scrapy/add-log-parameter-xmlite standard      0/1   21.0       5266      72491   0.114
+scrapy/add-log-parameter-xmlite anchored      1/1    7.0       2524      38907   0.076
+scrapy/add-log-parameter-xmlite routed        1/1    7.0       2749      35809   0.071
+scrapy/rename-description-comma standard      1/1   45.0       7922      43261   0.146
+scrapy/rename-description-comma anchored      0/1    3.0       1392      21909   0.039
+scrapy/rename-description-comma routed        0/1    3.0        916      20788   0.002
+tornado/rename-to-camel-case    standard      1/1    6.0       1356      19863   0.034
+tornado/rename-to-camel-case    anchored      1/1    4.0        853      26874   0.030
+tornado/rename-to-camel-case    routed        1/1    4.0        669      19686   0.025
+tornado/rename-http1connection  standard      1/1   15.0       2723      33908   0.062
+tornado/rename-http1connection  anchored      1/1    3.0       1193      21572   0.036
+tornado/rename-http1connection  routed        1/1    4.0       2464      31015   0.003
+TOTAL standard  correct 13/18  output 60664  input 796660  cost $1.355  per solved $0.104  claude-sonnet-5-5 $1.355
+TOTAL anchored  correct 14/18  output 23971  input 518509  cost $0.767  per solved $0.055  claude-sonnet-5-5 $0.767
+TOTAL routed    correct 13/18  output 37814  input 642965  cost $0.605  per solved $0.047  claude-haiku-5-5 $0.021 claude-sonnet-5-5 $0.584

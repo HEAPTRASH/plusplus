@@ -1,0 +1,28 @@
+{"task": "rename-class", "arm": "standard", "ok": true, "turns": 5, "out": 1138, "inp": 24656, "cost": 0.0317916}
+{"task": "rename-class", "arm": "standard", "ok": true, "turns": 6, "out": 1130, "inp": 25036, "cost": 0.032217}
+{"task": "rename-class", "arm": "standard", "ok": true, "turns": 5, "out": 992, "inp": 23766, "cost": 0.028170000000000004}
+{"task": "rename-class", "arm": "anchored", "ok": true, "turns": 3, "out": 761, "inp": 16410, "cost": 0.033319}
+{"task": "rename-class", "arm": "anchored", "ok": true, "turns": 4, "out": 857, "inp": 16580, "cost": 0.0246382}
+{"task": "rename-class", "arm": "anchored", "ok": true, "turns": 3, "out": 717, "inp": 16384, "cost": 0.0224352}
+{"task": "getenv", "arm": "standard", "ok": true, "turns": 9, "out": 1461, "inp": 31324, "cost": 0.03799280000000001}
+{"task": "getenv", "arm": "standard", "ok": true, "turns": 3, "out": 424, "inp": 16869, "cost": 0.018348200000000002}
+{"task": "getenv", "arm": "standard", "ok": true, "turns": 8, "out": 1255, "inp": 24441, "cost": 0.033006}
+{"task": "getenv", "arm": "anchored", "ok": true, "turns": 3, "out": 393, "inp": 16027, "cost": 0.0180978}
+{"task": "getenv", "arm": "anchored", "ok": true, "turns": 3, "out": 397, "inp": 16045, "cost": 0.0181718}
+{"task": "getenv", "arm": "anchored", "ok": true, "turns": 3, "out": 397, "inp": 16027, "cost": 0.0181378}
+{"task": "ctx-param", "arm": "standard", "ok": true, "turns": 8, "out": 1690, "inp": 31799, "cost": 0.051017999999999994}
+{"task": "ctx-param", "arm": "standard", "ok": true, "turns": 8, "out": 1653, "inp": 29683, "cost": 0.0478498}
+{"task": "ctx-param", "arm": "standard", "ok": true, "turns": 8, "out": 1747, "inp": 48159, "cost": 0.0649374}
+{"task": "ctx-param", "arm": "anchored", "ok": true, "turns": 10, "out": 2351, "inp": 74361, "cost": 0.0683282}
+{"task": "ctx-param", "arm": "anchored", "ok": true, "turns": 8, "out": 1990, "inp": 76446, "cost": 0.070957}
+{"task": "ctx-param", "arm": "anchored", "ok": true, "turns": 11, "out": 3016, "inp": 93919, "cost": 0.089678}
+
+task         arm        correct  turns output tok  input tok  cost $
+rename-class standard      3/3    5.3       1087      24486   0.031
+rename-class anchored      3/3    3.3        778      16458   0.027
+getenv       standard      3/3    6.7       1047      24211   0.030
+getenv       anchored      3/3    3.0        396      16033   0.018
+ctx-param    standard      3/3    8.0       1697      36547   0.055
+ctx-param    anchored      3/3    9.7       2452      81575   0.076
+TOTAL standard   correct 9/9  output 11490  input 255733  cost $0.345
+TOTAL anchored   correct 9/9  output 10879  input 342199  cost $0.364

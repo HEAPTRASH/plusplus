@@ -1,0 +1,98 @@
+{
+  "name": "plusplus",
+  "version": "0.2.0",
+  "description": "Cheaper Claude Code sessions: read and edit by stable line IDs, a model router that sends each task and agent to the cheapest model trusted with it, and a per-project spec and decision tracker",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "codegraph": {
+      "type": "string",
+      "title": "Code graph download",
+      "description": "ask: offer to download CodeGraph on first run; off: never download or prompt (for managed machines)",
+      "options": [
+        "ask",
+        "off"
+      ],
+      "default": "ask"
+    },
+    "codegraphMirror": {
+      "type": "string",
+      "title": "CodeGraph mirror URL",
+      "description": "Base URL to download releases from instead of GitHub, e.g. an internal artifact mirror",
+      "default": ""
+    },
+    "router": {
+      "type": "string",
+      "title": "Model router",
+      "description": "on: send each task to the cheapest model and effort trusted with it, never above the session's own; shadow: decide and report, change nothing; off",
+      "options": [
+        "on",
+        "shadow",
+        "off"
+      ],
+      "default": "on"
+    },
+    "routerFloor": {
+      "type": "string",
+      "title": "Router floor",
+      "description": "The cheapest model the router may use",
+      "options": [
+        "haiku",
+        "sonnet",
+        "opus"
+      ],
+      "default": "haiku"
+    },
+    "routerLog": {
+      "type": "string",
+      "title": "Router log file",
+      "description": "A file the router writes its decisions to as JSON, for benchmarks; empty for none",
+      "default": ""
+    },
+    "specs": {
+      "type": "string",
+      "title": "Specs and decisions",
+      "description": "auto: where a project has a store (/spec init), agents read its records and may propose new ones; read: agents read and never add; off: no tracker",
+      "options": [
+        "auto",
+        "read",
+        "off"
+      ],
+      "default": "auto"
+    },
+    "shellEdits": {
+      "type": "string",
+      "title": "Edits by shell script",
+      "description": "A Bash command that rewrites a file by script (sed -i, a python one-liner, a redirect onto a file). warn: let it run and tell the model to use edit; enforce: refuse it; off",
+      "options": [
+        "warn",
+        "enforce",
+        "off"
+      ],
+      "default": "warn"
+    },
+    "routerGrader": {
+      "type": "string",
+      "title": "Router grader",
+      "description": "What grades a task's complexity: haiku (the session's own small model), or jev (TypeSafe's System One API; needs TYPESAFE_API_KEY in the environment and sends each task's text to TypeSafe)",
+      "options": [
+        "haiku",
+        "jev"
+      ],
+      "default": "haiku"
+    },
+    "icons": {
+      "type": "string",
+      "title": "Icons",
+      "description": "The glyphs the panes, toasts and status line draw with. auto: Unicode, or plain ASCII where the terminal's locale is not UTF-8; unicode; ascii",
+      "options": [
+        "auto",
+        "unicode",
+        "ascii"
+      ],
+      "default": "auto"
+    }
+  },
+  "author": {
+    "name": "HEAPTRASH"
+  }
+}

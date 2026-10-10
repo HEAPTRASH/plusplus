@@ -1,0 +1,5 @@
+{
+  "name": "plusplus",
+  "owner": { "name": "HEAPTRASH" },
+  "plugins": [{ "name": "plusplus", "source": "./mod" }]
+}
