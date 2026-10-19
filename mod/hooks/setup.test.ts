@@ -33,7 +33,7 @@ test('setup dialog asks before downloading and keeps the answer', async ($, on) 
 })
 
 /** The engine beneath an install: a machine where curl takes six seconds to bring the archive, whose sum is `sum`, and `head` ms to say its size. */
-function machine(on: On, sum = SUM, head = 0) {
+function machine(on: On, sum = SUM, head = 0, linux = false) {
   const clock = mock.clock(on), w = { clock, toasts: [] as string[], closed: 0, opened: [] as unknown[], ran: [] as string[], sets: 0, has: false, started: -1 }
   const ok = (stdout = '') => ({ value: { exitCode: 0, stdout, stderr: '', isStdoutTruncated: false, isStderrTruncated: false } })
   mock.store(on)
@@ -49,7 +49,10 @@ function machine(on: On, sum = SUM, head = 0) {
     if (head && e.argv[1] === '-fsSLI') await clock.sleep(head)
     const a = e.argv
     w.ran.push(a.slice(0, 2).join(' '))
-    if (a[0] === 'uname') return ok('Darwin arm64\n')
+    if (a[0] === 'uname') return ok(linux ? 'Linux x86_64\n' : 'Darwin arm64\n')
+    // a Linux without perl's shasum: the binary is missing, so the call fails to start rather than exiting non-zero
+    if (linux && a[0] === 'shasum') throw new Error('spawn shasum ENOENT')
+    if (linux && a[0] === 'sha256sum') return await clock.sleep(400), ok(`${sum}  cg.tar.gz\n`)
     if (a[0] === 'curl' && a[1] === '-fsSLI') return ok(`HTTP/2 302\r\ncontent-length: 0\r\n\r\nHTTP/2 200\r\nContent-Length: ${SIZE}\r\n`)
     if (a[0] === 'curl') return (w.started = clock.now()), await clock.sleep(6000), ok()
     if (a[0] === 'shasum') return await clock.sleep(400), ok(`${sum}  cg.tar.gz\n`)
@@ -98,6 +101,17 @@ test('the download is a bar that fills as the archive arrives, then the check an
   await ui.unmount()
 })
 
+test('on Linux without shasum the archive is checked with sha256sum and installs', async ($, on) => {
+  const w = machine(on, 'ef0af416092128fb1ccc723786000b7edf4a6971fe604acd08bf966e4f37b828', 0, true)
+  const ui = await $.ui.mount({ ...DIALOG, surface: 'terminal' })
+  const pressed = ui.press({ key: 'yes' })
+  await w.clock.advance(6000 + 400 + 400 + 1000)
+  await pressed
+  expect(await ui.find({ type: 'Text', text: /^CodeGraph v1\.6\.2 installed in / })).toBeDefined()
+  expect(w.ran.some(r => r.startsWith('shasum'))).toBe(false)
+  await w.clock.advance(3000)
+  await ui.unmount()
+})
 test('while the server is still being asked the archive\'s size, the spinner already turns', async ($, on) => {
   const w = machine(on, SUM, 3000)
   const ui = await $.ui.mount({ ...DIALOG, surface: 'terminal' })
