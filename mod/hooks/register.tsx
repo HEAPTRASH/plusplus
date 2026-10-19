@@ -117,7 +117,11 @@ async function install($: EngineInterface, opts: Options): Promise<string | unde
     await run(['curl', '-fsSL', '--retry', '2', url, '-o', `${tmp}/cg.tar.gz`], 600_000)
     await tell($, { phase: 'verify', ...(of ? { got: of } : {}) })
     // verify against the hash pinned here, not one fetched beside the archive
-    const sum = (await $.process.run(['shasum', '-a', '256', `${tmp}/cg.tar.gz`])).stdout || (await run(['sha256sum', `${tmp}/cg.tar.gz`]))
+    // sha256sum is GNU coreutils (Linux), shasum ships with macOS and is often absent on Linux: a missing one may throw, so try each
+    const sums = [['sha256sum'], ['shasum', '-a', '256']].map(c => [...c, `${tmp}/cg.tar.gz`])
+    let sum = ''
+    for (const argv of sums) if ((sum = await $.process.run(argv).then(r => (r.exitCode === 0 ? r.stdout : ''), () => ''))) break
+    if (!sum) throw new Error('neither sha256sum nor shasum is available to verify the download')
     if (sum.split(/\s+/)[0] !== want) throw new Error(`checksum mismatch for ${url}; not installed`)
     await tell($, { phase: 'unpack' })
     await run(['tar', '-xzf', `${tmp}/cg.tar.gz`, '-C', `${tmp}/x`, '--strip-components=1'], 120_000)
